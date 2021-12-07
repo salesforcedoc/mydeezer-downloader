@@ -1,0 +1,13 @@
+---
+version: '2'
+
+services:
+  deezer-downloader:
+    build: .
+    environment:
+      - DEEZER_COOKIE_ARL=changeme
+      - DEEZER_FLAC_QUALITY=False
+    volumes:
+      - ./downloads:/mnt/deezer-downloader
+    ports:
+      - "5000:5000"
